@@ -1,7 +1,7 @@
 {
   "name": "sidebar-body-related",
   "version": "1.0.0",
-  "description": "side bar main body and related content",
+  "description": "sidebar, main body and related content",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,7 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/Team-Gandalf/sidebar-body-related.git"
   },
-  "author": "",
+  
+  "author": "Haider Syed",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Team-Gandalf/sidebar-body-related/issues"
