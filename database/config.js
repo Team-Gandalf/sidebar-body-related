@@ -12,8 +12,13 @@ db.once("open", () =>
   console.log(`Connected to MongoDB on ${db.host}:${db.port}`)
 );
 
-var getAll = data => {
+var getAll = () => {
     console.log("getAll was called")
+}
+
+var getRelatedContent = () => {
+    console.log("getRelatedContent was called")
 }
   
 module.exports.getAll = getAll;
+module.exports.getRelatedContent = getRelatedContent;
