@@ -1,10 +1,11 @@
 {
   "name": "sidebar-body-related",
   "version": "1.0.0",
-  "description": "sidebar, main body and related content",
-  "main": "index.js",
+  "description": "side bar main body and related content",
+  "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./server/index.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/Team-Gandalf/sidebar-body-related/issues"
   },
-  "homepage": "https://github.com/Team-Gandalf/sidebar-body-related#readme"
+  "homepage": "https://github.com/Team-Gandalf/sidebar-body-related#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.10",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
 }
