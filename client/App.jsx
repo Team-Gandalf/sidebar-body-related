@@ -10,7 +10,7 @@ class App extends React.Component {
     render() {
       return (
         <div>
-          MY REACT IS ALIVE!
+          MY REACT IS ALIVE! AND IS WORKING!
         </div>
       );
     }
