@@ -5,13 +5,13 @@
   "main": "./index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./server/index.js"
+    "start": "nodemon ./server/index.js",
+    "babel": "babel client --out-dir public --presets=env,react --source-maps inline --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Team-Gandalf/sidebar-body-related.git"
   },
-  
   "author": "Haider Syed",
   "license": "ISC",
   "bugs": {
@@ -24,6 +24,10 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
   }
 }
