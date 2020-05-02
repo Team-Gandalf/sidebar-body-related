@@ -9,13 +9,14 @@ class App extends React.Component {
   
     render() {
       return (
-        <div>
-          MY REACT IS ALIVE! AND IS WORKING!
-        </div>
-      );
+      <div>
+        
+      </div>
+      )
     }
-  }
+};
 
 
   ReactDOM.render(<App />, document.getElementById("haider-steamy"));
-  
+
+

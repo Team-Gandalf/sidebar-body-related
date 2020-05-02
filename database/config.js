@@ -1,14 +1,11 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 mongoose.connect(
-  "mongodb://localhost/steamy",
-  { useNewUrlParser: true }
+  'mongodb://localhost/steamy',
+  { useNewUrlParser: true },
 );
 
-var db = mongoose.connection;
+const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
-db.once("open", () =>
-  console.log(`Connected to MongoDB on ${db.host}:${db.port}`)
-);
-  
+db.once('open', () => console.log(`Connected to MongoDB on ${db.host}:${db.port}`));
