@@ -8,30 +8,28 @@ const gameSchema = new mongoose.Schema({
   mainbody: {
     description: String,
     images: Array,
-  },
-  maturecontent: {
-    description: Array
-  },
-  sysrequirement: {
-    os: Array,
-    processor: String,
-    memory: String,
-    graphics: String,
+    maturecontent: Array,
+    sysrequirement: {
+      os: Array,
+      processor: String,
+      memory: String,
+      graphics: String,
+    }
   },
   sidebar: {
     description: [String],
     vrsupport: [String],
     languages: Object,
-    achievements: [String]
+    achievements: [String],
+    metacritic: Number,
+    minidescription: {
+      genre: Array,
+      developer: String,
+      publisher: String, 
+      franchise: String,
+      releasedate: String
+    },
   },
-  minidesciption: {
-    genre: Array,
-    developer: String,
-    publisher: String, 
-    franchise: String,
-    releasedate: String
-  },
-  metacritic: Number
 });
 
 const Game = mongoose.model('Game', gameSchema);
@@ -64,13 +62,14 @@ const getAll = (callback) => {
   });
 };
 
-const getOne = (name, callback) => {
-  Game.find({name}).exec((err, res) => {
+const getOne = (query, callback) => {
+  Game.find({_id: query._id}).exec((err, res) => {
     if (err) {
       console.log('error in getOne');
       throw err;
     } else {
-      callback(res);
+      callback(null, res);
+      // console.log(res);
       console.log('getOne success');
     }
   });

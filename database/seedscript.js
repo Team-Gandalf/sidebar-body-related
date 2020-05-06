@@ -52,30 +52,31 @@ const saveInfo = () => {
       mainbody: {
         description: faker.lorem.paragraph(),
         images: [faker.image.image(), faker.image.image()],
-      },
-      maturecontent: {
-        description: [... new Set(xMContent)],
-      },
-      sysrequirement: {
-        os: [... new Set(xOs)],
-        processor: proc[Math.floor(Math.random() * proc.length)],
-        memory: mem[Math.floor(Math.random() * mem.length)],
-        graphics: gphx[Math.floor(Math.random() * gphx.length)],
+        maturecontent: {
+          description: [... new Set(xMContent)],
+        },
+        sysrequirement: {
+          os: [... new Set(xOs)],
+          processor: proc[Math.floor(Math.random() * proc.length)],
+          memory: mem[Math.floor(Math.random() * mem.length)],
+          graphics: gphx[Math.floor(Math.random() * gphx.length)],
+        },
       },
       sidebar: {
         description: [faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word()],
         vrsupport: [faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word()],
         languages: xLanguages,
         achievements: [... new Set(xAchieves)],
+        metacritic: Math.floor(Math.random() * 101),
+        minidesciption: {
+          genre: [... new Set(xGenres)],
+          developer: faker.company.companyName(),
+          publisher: faker.company.companyName(), 
+          franchise: faker.company.companyName(),
+          releasedate: faker.date.past()
+        },
       },
-      minidesciption: {
-        genre: [... new Set(xGenres)],
-        developer: faker.company.companyName(),
-        publisher: faker.company.companyName(), 
-        franchise: faker.company.companyName(),
-        releasedate: faker.date.past()
-      },
-      metacritic: Math.floor(Math.random() * 101)
+
     });
     example.save((err) => {
       if (err) {
@@ -117,4 +118,4 @@ for (let i = 0; i < 20; i += 1) {
 };
 
 saveInfo();
-saveRelated();
+// saveRelated();
