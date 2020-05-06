@@ -1,0 +1,119 @@
+body {
+    background-color: #1B2838;
+    color: #acb2b8;
+    font-family: sans-serif;
+    font-weight: normal;
+    background-image: url();
+    /* background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;   */
+    margin: 0 auto;
+    padding: 0;
+    width: 940px;
+    
+  }
+
+  .rightcolumn{
+    float: right;
+    font-size: 12px;
+    margin: 32px 0 0 0;
+    overflow: hidden;
+    padding: 0;
+    width: 308px;
+}
+
+.leftcolumn{
+    color: #acb2b8;
+    float: left;
+    font-size: 14px;
+    margin: 16px 0 0 0;
+    padding: 0;
+    width: 616px;
+}
+
+h2{
+    background-image: url(https://steamstore-a.akamaihd.net/public/images/v6/maincol_gradient_rule.png);
+    background-position: left bottom;
+    background-repeat: no-repeat no-repeat;
+    color: #fff;
+    font-family: "Motiva Sans",sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 26px;
+    margin: 0 0 10px;
+    padding: 2px 0 0;
+    text-transform: uppercase;
+}
+
+
+#sidebaritems{
+    background-color: rgba(103,193,245,.1);
+    border-radius: 1px;
+    color: #67c1f5;
+    display: block;
+    font-family: "Motiva Sans",sans-serif;
+    font-weight: 300;
+    line-height: 17px;
+    margin: 0 0 2px;
+    min-height: 17px;
+    padding: 4px 0 4px 8px;
+    text-decoration: none;
+}
+
+#achievements{
+ /* -webkit-user-drag: none;
+  border-style: none;
+  float: left; */
+  height: 16px;
+  margin: 0 4px 0 0;
+  padding: 0;
+  width: 16px;
+}
+
+
+
+#sidebaritems:hover {
+    background-image: linear-gradient(135deg,#67c1f5 0%,#417a9b 100%);
+    color: #fff;
+}
+
+#sidebartags{
+    background-color: transparent;
+    border-radius: 2px;
+    display: block;
+    font-size: 15px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0 15px;
+}
+
+.sidebardesc{
+    background-image: linear-gradient(to right,rgba(0,0,0,.2) 0%,rgba(0,0,0,.5) 100%);
+    margin: 0 0 8px;
+    padding: 16px;
+}
+
+
+#minidescriptionkey{
+    color: #556772;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+#minidescriptionurl{
+    color: #67c1f5;
+    font-family: "Motiva Sans",sans-serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+#minidescriptionurl:hover {
+    color: #fff;
+  }
