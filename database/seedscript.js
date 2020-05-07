@@ -50,7 +50,7 @@ const saveInfo = () => {
       name: faker.commerce.productName(),
       url: faker.internet.url(),
       mainbody: {
-        description: faker.lorem.paragraph(),
+        description: faker.lorem.paragraphs(),
         images: [faker.image.image(), faker.image.image()],
         maturecontent: {
           description: [... new Set(xMContent)],
@@ -63,12 +63,12 @@ const saveInfo = () => {
         },
       },
       sidebar: {
-        description: [faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word()],
-        vrsupport: [faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word(), faker.lorem.word()],
+        description: {player: [faker.lorem.word(), faker.image.image()], achievements: [faker.lorem.word(), faker.image.image()], captions: [faker.lorem.word(), faker.image.image()], workshop: [faker.lorem.word(), faker.image.image()], editor: [faker.lorem.word(), faker.image.image()]},
+        vrsupport: {headset: [faker.lorem.word(), faker.image.image(), faker.lorem.word(), faker.image.image(), faker.lorem.word(), faker.image.image(), faker.lorem.word(), faker.image.image() ], input: [faker.lorem.word(), faker.image.image()], playarea: [faker.lorem.word(), faker.image.image(),faker.lorem.word(), faker.image.image(),faker.lorem.word(), faker.image.image()]}, 
         languages: xLanguages,
         achievements: [... new Set(xAchieves)],
         metacritic: Math.floor(Math.random() * 101),
-        minidesciption: {
+        minidescription: {
           genre: [... new Set(xGenres)],
           developer: faker.company.companyName(),
           publisher: faker.company.companyName(), 
@@ -118,4 +118,4 @@ for (let i = 0; i < 20; i += 1) {
 };
 
 saveInfo();
-// saveRelated();
+saveRelated();

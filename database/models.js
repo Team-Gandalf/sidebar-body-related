@@ -17,10 +17,10 @@ const gameSchema = new mongoose.Schema({
     }
   },
   sidebar: {
-    description: [String],
-    vrsupport: [String],
+    description: Object,
+    vrsupport: Object,
     languages: Object,
-    achievements: [String],
+    achievements: Array,
     metacritic: Number,
     minidescription: {
       genre: Array,
@@ -50,18 +50,6 @@ const relatedContent = new mongoose.Schema({
 const Related = mongoose.model('Related', relatedContent);
 
 // METHODS
-const getAll = (callback) => {
-  Game.find({}).exec((err, res) => {
-    if (err) {
-      console.log('error in getAll');
-      throw err;
-    } else {
-      callback(res);
-      console.log('getAll success');
-    }
-  });
-};
-
 const getOne = (query, callback) => {
   Game.find({_id: query._id}).exec((err, res) => {
     if (err) {
@@ -81,14 +69,12 @@ const getRelatedContent = (callback) => {
       console.log('error in getRelatedContent');
       throw err;
     } else {
-      callback(res);
+      callback(null, res);
       console.log('getRelatedContent success');
     }
   });
 };
 
-
-module.exports.getAll = getAll;
 module.exports.getOne = getOne;
 module.exports.getRelatedContent = getRelatedContent;
 module.exports.Related = Related;

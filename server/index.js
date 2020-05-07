@@ -13,8 +13,7 @@ app.use(function(req, res, next) {
 next()
 })
 
-var hostname = 'localhost';
-var port = 1991;
+
 
 app.get("/mainbody", (req, res) => {
   let query = req.query;
@@ -40,6 +39,4 @@ app.get("/related-content", (req, res) => {
   })
 })
 
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+module.exports = app

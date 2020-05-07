@@ -2,7 +2,6 @@ import React from 'react';
 import axios from 'axios'
 
 import Mainbody from './components/Mainbody.jsx';
-import RelatedContent from './components/RelatedContent.jsx';
 import Sidebar from './components/Sidebar.jsx';
 
 class App extends React.Component {
@@ -17,7 +16,7 @@ class App extends React.Component {
 componentDidMount() {
   axios.get('http://localhost:1991/mainbody', {
     params: {
-      _id: "5eb226e2d6d23f3fe2d49bc3",
+      _id: "5eb32fd8427bc266c29a6161",
     }
   })
   .then((res) => {
@@ -38,7 +37,6 @@ componentDidMount() {
 render() {
   const {game, loading} = this.state;
   // if(loading === false) console.log("this.state in render is", game.mainbody);
-
     return (
     <div>
       <div>
@@ -48,17 +46,12 @@ render() {
         {loading === false ? 
         <Sidebar sidebardata={game.sidebar} name={game.name}/>
         : ' Side bar content loading...'}
-        {loading === false ? 
-        <RelatedContent />
-        : 'Related content loading...'}
       </div>
     </div>
-    )
-   
-}
+    ) 
+  }
 };
 
-
-ReactDOM.render(<App />, document.getElementById("haider-steamy"));
+export default App;
 
 
