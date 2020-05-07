@@ -1,4 +1,5 @@
 import React from 'react';
+import RelatedContent from './RelatedContent.jsx';
 
 const Mainbody = (props) => {
 // console.log("mainbody props: ", props)
@@ -18,7 +19,6 @@ const gphx = props.mainbodydata.sysrequirement.graphics;
             <img src={props.mainbodydata.images[1]} width="50%" height="50%"/>
             <div id="mainbodycontent">{description}</div>
           <br></br>
-            {/* <div>═════════════════════════════════════════════════════════════════</div> */}
           <strong>ABOUT GAMEPLAY IN VR:</strong> 
             <div>{description}</div> 
           <br></br>
@@ -28,12 +28,13 @@ const gphx = props.mainbodydata.sysrequirement.graphics;
           <br></br>
           <h2>SYSTEM REQUIREMENTS:</h2>
           <div>Minimum: </div>
-            <div>OS: {os}</div>
-            <div>Processor: {processor}</div>
-            <div>Memory: {memory}</div>
-            <div>Graphics: {gphx}</div>
+            <div id="key">OS: <span>{os}</span></div>
+            <div id="key">Processor: {processor}</div>
+            <div id="key">Memory: {memory}</div>
+            <div id="key">Graphics: {gphx}</div>
           </div>
-        </div>           
+        </div>
+        <RelatedContent />           
       </div>
     )
   }

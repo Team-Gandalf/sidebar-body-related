@@ -3,27 +3,27 @@ import { PromiseProvider } from 'mongoose';
 
 const Minidescription = (props) => {
     const genres = props.minidescription.genre.join(", ")
-    const releasedate = props.minidescription.releasedate.substring(4,15)
-    // console.log("Minidescription props: ", props)
+    const releasedate = props.minidescription.releasedate.substring(4,10) + ", " + props.minidescription.releasedate.substring(11,15)
+    console.log("Minidescription props: ", props)
       return (
         <div className="sidebardesc">
           <div>
-          <span id="minidescriptionkey">TITLE:</span><span id="minidescriptionvalue"> {props.name}</span>
+          <span id="key">TITLE:</span><span id="minidescriptionvalue"> {props.name}</span>
           </div>
           <div>
-          <span id="minidescriptionkey">GENRE:</span><span id="minidescriptionurl"> {genres}</span>
+          <span id="key">GENRE:</span><span id="minidescriptionurl"> {genres}</span>
           </div>
           <div>
-          <span id="minidescriptionkey">DEVELOPER:</span><span id="minidescriptionurl"> {props.minidescription.developer}</span>
+          <span id="key">DEVELOPER:</span><span id="minidescriptionurl"> {props.minidescription.developer}</span>
           </div>
           <div>
-          <span id="minidescriptionkey">PUBLISHER:</span><span id="minidescriptionurl"> {props.minidescription.publisher}</span>
+          <span id="key">PUBLISHER:</span><span id="minidescriptionurl"> {props.minidescription.publisher}</span>
           </div>
           <div>
-          <span id="minidescriptionkey">FRANCHISE:</span><span id="minidescriptionvalue"> {props.minidescription.franchise}</span>
+          <span id="key">FRANCHISE:</span><span id="minidescriptionvalue"> {props.minidescription.franchise}</span>
           </div>
           <div>
-          <span id="minidescriptionkey">RELEASE DATE:</span><span id="minidescriptionvalue"> {releasedate}</span>
+          <span id="key">RELEASE DATE:</span><span id="minidescriptionvalue"> {releasedate}</span>
           </div>
           <br></br>
           <div>
