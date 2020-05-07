@@ -5,7 +5,7 @@ const { Game } = models;
 const { Related } = models;
 
 const mContent = ['Alcohol Reference','Blood','Cartoon Violence','Crude Humor','Fantasy Violence','Language','Mature Humor','Partial Nudity','Sexual Content','Sexual Violence','Strong Language','Strong Sexual Content','Tobacco Reference','Use of Drugs','Violence','Animated Blood','Blood and Gore','Comic Mischief','Drug Reference','Intense Violence','Lyrics','Nudity','Real Gambling','Sexual Themes','Simulated Gambling','Strong Lyrics','Suggestive Themes','Use of Alcohol','Use of Tobacco','Violent References'];
-const languages = ['English', 'French', 'German', 'Spanish-Spain', 'Japanese', 'Korean', 'Russian', 'Simplified-Chinese', 'Spanish-Latin America', 'Traditional-Chinese']
+const languages = ['English', 'French', 'German', 'SpanishSpain', 'Japanese', 'Korean', 'Russian', 'SimplifiedChinese', 'SpanishLatin America', 'TraditionalChinese']
 const gameOS = ['Windows 10', 'Mac OSX', 'Linux']
 const proc = ['Core i5-7500', 'Core i5-7600', 'Core i5-7700', 'Core i5-7800'];
 const mem = ['2GB RAM', '4GB RAM', '8GB RAM', '12GB RAM', '16GB RAM' ];
