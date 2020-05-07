@@ -16,7 +16,7 @@ class App extends React.Component {
 componentDidMount() {
   axios.get('http://localhost:1991/mainbody', {
     params: {
-      _id: "5eb32fd8427bc266c29a6161",
+      _id: "5eb4629465b603061e047035",
     }
   })
   .then((res) => {
