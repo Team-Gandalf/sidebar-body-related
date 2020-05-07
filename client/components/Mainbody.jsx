@@ -2,7 +2,7 @@ import React from 'react';
 import RelatedContent from './RelatedContent.jsx';
 
 const Mainbody = (props) => {
-// console.log("mainbody props: ", props)
+console.log("mainbody props: ", props)
 const description = props.mainbodydata.description;
 const matureContent = props.mainbodydata.maturecontent[0].description.join(", "); 
 const os = props.mainbodydata.sysrequirement.os.join(", ");
