@@ -30,6 +30,63 @@ const gameSchema = new mongoose.Schema({
       releasedate: String
     },
   },
+  relatedContent : [{
+    name: String,
+    thumbnail : String,
+    price: String,
+    hoverinfo: {
+      releasedate: String,
+      gif: String, 
+      reviews: String, 
+      totalReviews: Number,
+      tag: Array
+    }
+  },{
+    name: String,
+    thumbnail : String,
+    price: String,
+    hoverinfo: {
+      releasedate: String,
+      gif: String, 
+      reviews: String, 
+      totalReviews: Number,
+      tag: Array
+    }
+  },{
+    name: String,
+    thumbnail : String,
+    price: String,
+    hoverinfo: {
+      releasedate: String,
+      gif: String, 
+      reviews: String, 
+      totalReviews: Number,
+      tag: Array
+    }
+  },{
+    name: String,
+    thumbnail : String,
+    price: String,
+    hoverinfo: {
+      releasedate: String,
+      gif: String, 
+      reviews: String, 
+      totalReviews: Number,
+      tag: Array
+    }
+  },{
+    name: String,
+    thumbnail : String,
+    price: String,
+    hoverinfo: {
+      releasedate: String,
+      gif: String, 
+      reviews: String, 
+      totalReviews: Number,
+      tag: Array
+    }
+  },
+]
 });
 
 const Game = mongoose.model('Game', gameSchema);
