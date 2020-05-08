@@ -91,20 +91,20 @@ const gameSchema = new mongoose.Schema({
 
 const Game = mongoose.model('Game', gameSchema);
 
-const relatedContent = new mongoose.Schema({
-  name: String,
-      thumbnail : String,
-      price: String,
-      hoverinfo: {
-        releasedate: String,
-        gif: String, 
-        reviews: String, 
-        totalReviews: Number,
-        tag: Array
-  }
-});
+// const relatedContent = new mongoose.Schema({
+//   name: String,
+//       thumbnail : String,
+//       price: String,
+//       hoverinfo: {
+//         releasedate: String,
+//         gif: String, 
+//         reviews: String, 
+//         totalReviews: Number,
+//         tag: Array
+//   }
+// });
 
-const Related = mongoose.model('Related', relatedContent);
+// const Related = mongoose.model('Related', relatedContent);
 
 // METHODS
 const getOne = (query, callback) => {
@@ -134,5 +134,5 @@ const getRelatedContent = (callback) => {
 
 module.exports.getOne = getOne;
 module.exports.getRelatedContent = getRelatedContent;
-module.exports.Related = Related;
+// module.exports.Related = Related;
 module.exports.Game = Game;

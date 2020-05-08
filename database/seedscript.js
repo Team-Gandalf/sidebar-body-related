@@ -45,7 +45,7 @@ const saveInfo = () => {
   };
 
   let xAchieves = [];
-    for (var n = 0; n < Math.floor(Math.random() * 10); n += 1) {
+    for (var n = 0; n < Math.floor(Math.random() * 10 + 5); n += 1) {
       xAchieves.push(achieves[Math.floor(Math.random() * achieves.length)])
   };
 
