@@ -34,7 +34,7 @@ const gphx = props.mainbodydata.sysrequirement.graphics;
             <div id="key">Graphics: {gphx}</div>
           </div>
         </div>
-        <RelatedContent />           
+        <RelatedContent relatedcontent={props.relatedcontent}/>           
       </div>
     )
   }

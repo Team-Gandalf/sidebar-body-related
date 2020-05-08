@@ -16,7 +16,7 @@ class App extends React.Component {
 componentDidMount() {
   axios.get('http://localhost:1991/mainbody', {
     params: {
-      _id: "5eb4629465b603061e047035",
+      _id: "5eb47008e741ac0c2025a59a",
     }
   })
   .then((res) => {
@@ -41,7 +41,7 @@ render() {
     <div>
       <div>
         {loading === false ? 
-        <Mainbody mainbodydata={game.mainbody}/>
+        <Mainbody mainbodydata={game.mainbody} relatedcontent={game.relatedContent}/>
         : 'Main body loading...'}
         {loading === false ? 
         <Sidebar sidebardata={game.sidebar} name={game.name}/>
