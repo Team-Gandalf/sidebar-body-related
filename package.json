@@ -29,7 +29,8 @@
     "mongoose": "^5.9.10",
     "path": "^0.12.7",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-slick": "^0.25.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",

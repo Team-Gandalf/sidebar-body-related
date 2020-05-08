@@ -4,12 +4,12 @@ const Achievements = (props) => {
     const achievements = props.achievements.length;
     console.log("Achievements props: ", props)
       return (
-        <div className="sidebardesc">
-            <div>Includes {achievements} Steam Achievements </div>
-            <span id="achievements"><img src={props.achievements[0]} width="64" height="64"/></span>
-            <span id="achievements"><img src={props.achievements[1]} width="64" height="64"/></span>
-            <span id="achievements"><img src={props.achievements[0]} width="64" height="64"/></span>
-            <span id="achievements"><img src={props.achievements[1]} width="64" height="64"/></span>
+        <div className="sidebaritem">
+            <div id="sidebartitle">Includes {achievements} Steam Achievements </div>
+            {props.achievements.slice(0,3).map((item, index) => (
+              <span id="achievements"><img src={props.achievements[index]} width="64" height="64"/></span>  
+            ))}
+            <div id="viewallachievements" width="64" height="64"> View all {achievements}</div>
         </div> 
       )
     }

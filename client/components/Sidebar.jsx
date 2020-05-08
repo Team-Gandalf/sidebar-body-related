@@ -15,14 +15,10 @@ const SideBar = (props) => {
           <Languages languages={props.sidebardata.languages}/>
           <Achievements achievements={props.sidebardata.achievements}/>
           <Minidescription minidescription={props.sidebardata.minidescription} name={props.name}/>
-          <div className="sidebardesc">
-          <span id='sidebartags'> Share </span>
-          <span id='sidebartags'> Embed </span>
-          <span id='sidebartags'> Flag </span>
+          <div className="sidebaritem">{props.sidebardata.metacritic}
+          <img src="https://www.metacritic.com/game/pc/half-life-alyx?ftag=MCD-06-10aaa1f"></img>
+          <span id="metacritictext"> metacritic</span>
           </div>
-          <div className="sidebardesc">{props.sidebardata.metacritic}</div>
-          <div></div>
-          {/* <img src="https://www.metacritic.com/game/pc/half-life-alyx?ftag=MCD-06-10aaa1f"> */}
       </div>
     )
   }
