@@ -127,15 +127,15 @@ const getOne = (query, callback) => {
 };
 
 const getRelatedContent = (callback) => {
-  Related.find({}).exec((err, res) => {
-    if (err) {
-      console.log("error in getRelatedContent");
-      throw err;
-    } else {
-      callback(null, res);
-      console.log("getRelatedContent success");
-    }
-  });
+  // Related.find({}).exec((err, res) => {
+  //   if (err) {
+  //     console.log("error in getRelatedContent");
+  //     throw err;
+  //   } else {
+  //     callback(null, res);
+  //     console.log("getRelatedContent success");
+  //   }
+  // });
 };
 
 module.exports.getOne = getOne;
