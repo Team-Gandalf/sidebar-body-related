@@ -1,41 +1,69 @@
-import React from 'react';
+import React from "react";
+import { Tooltip } from "reactstrap";
 
 class EachPicture extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isHovering: false,
+      tooltipOpen: false,
     };
-    this.mouseHover = this.mouseHover.bind(this)
+    this.toggle = this.toggle.bind(this);
   }
 
-  mouseHover(){
-    // console.log("hover state toggled")
-    this.setState({isHovering: !this.state.isHovering});
-    console.log(this.state.isHovering)
+  toggle() {
+    this.setState({ tooltipOpen: !this.state.tooltipOpen });
   }
 
-render () {
-  var data = this.props.item;
-  var hover = this.props.item.hoverinfo;
-  
-  console.log("each props: ", data)
-  return (
-    <div >
-        <img src={data.thumbnail} width="171" height="64" onMouseEnter={this.mouseHover} onMouseLeave={this.mouseHover}/>
-        {this.state.isHovering && <div>
-             <div>{data.name}</div>
-             <div>{hover.releasedate}</div>
-             <img src={hover.gif} width="50" height="50"></img>
-             <div> Overall User Reviews </div>
-             <div>{hover.reviews}</div>
-             <div>{hover.totalreviews}</div>
-             <div>{hover.tag}</div>
-             </div>}
-        <h5>{data.name}</h5>
-        <h5>{data.price}</h5>
-    </div>
-    ) 
+  render() {
+    const { item } = this.props;
+    const { thumbnail, price, name, hoverinfo } = item;
+    const { gif, reviews, totalReviews, tag } = hoverinfo;
+    const releasedate =
+      hoverinfo.releasedate.substring(4, 10) +
+      ", " +
+      hoverinfo.releasedate.substring(11, 15);
+
+    console.log("index: ", this.props.index);
+    return (
+      <div className="item" id={`id${this.props.index}`}>
+        <div className="item-img-wrap">
+          <img src={thumbnail} alt="" />
+        </div>
+        <div className="content">
+          <p>{name}</p>
+          <p>${price}</p>
+        </div>
+        <div>
+          <Tooltip
+            placement="right"
+            isOpen={this.state.tooltipOpen}
+            target={`id${this.props.index}`}
+            toggle={this.toggle}
+          >
+            <div className="tooltip-wrap">
+              <h4>{name}</h4>
+              <p className="c-black">{releasedate}</p>
+              <div className="tooltip-img-wrap">
+                <img src={gif} width="50" height="50"></img>
+              </div>
+              <div className="reviews">
+                <p> Overall User Reviews </p>
+                <p>
+                  <span className="c-blue">{reviews}</span>{" "}
+                  <span>({totalReviews}) reviews</span>
+                </p>
+              </div>
+              <h6>User tags:</h6>
+              <div className="tag-flex">
+                {tag.map((t) => (
+                  <span>{t}</span>
+                ))}
+              </div>
+            </div>
+          </Tooltip>
+        </div>
+      </div>
+    );
   }
 }
 

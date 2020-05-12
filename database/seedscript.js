@@ -40,7 +40,7 @@ const saveInfo = () => {
     };
 
   let xGenres = [];
-    for (var m = 0; m < Math.floor(Math.random() * 10); m += 1) {
+    for (var m = 0; m < Math.floor(Math.random() * 3 + 1); m += 1) {
       xGenres.push(genres[Math.floor(Math.random() * genres.length)])
   };
 
