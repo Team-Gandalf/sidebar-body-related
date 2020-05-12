@@ -1,9 +1,10 @@
-const mongoose = require('mongoose');
-const config = require('./config.js');
+const mongoose = require("mongoose");
+const config = require("./config.js");
 
 // SCHEMAS
 const gameSchema = new mongoose.Schema({
-  name: {type: String, unique: true},
+  proxyId: Number,
+  name: { type: String, unique: true },
   url: String,
   mainbody: {
     description: String,
@@ -14,7 +15,7 @@ const gameSchema = new mongoose.Schema({
       processor: String,
       memory: String,
       graphics: String,
-    }
+    },
   },
   sidebar: {
     description: Object,
@@ -25,71 +26,76 @@ const gameSchema = new mongoose.Schema({
     minidescription: {
       genre: Array,
       developer: String,
-      publisher: String, 
+      publisher: String,
       franchise: String,
-      releasedate: String
+      releasedate: String,
     },
   },
-  relatedContent : [{
-    name: String,
-    thumbnail : String,
-    price: String,
-    hoverinfo: {
-      releasedate: String,
-      gif: String, 
-      reviews: String, 
-      totalReviews: Number,
-      tag: Array
-    }
-  },{
-    name: String,
-    thumbnail : String,
-    price: String,
-    hoverinfo: {
-      releasedate: String,
-      gif: String, 
-      reviews: String, 
-      totalReviews: Number,
-      tag: Array
-    }
-  },{
-    name: String,
-    thumbnail : String,
-    price: String,
-    hoverinfo: {
-      releasedate: String,
-      gif: String, 
-      reviews: String, 
-      totalReviews: Number,
-      tag: Array
-    }
-  },{
-    name: String,
-    thumbnail : String,
-    price: String,
-    hoverinfo: {
-      releasedate: String,
-      gif: String, 
-      reviews: String, 
-      totalReviews: Number,
-      tag: Array
-    }
-  },{
-    name: String,
-    thumbnail : String,
-    price: String,
-    hoverinfo: {
-      releasedate: String,
-      gif: String, 
-      reviews: String, 
-      totalReviews: Number,
-      tag: Array
-    }
-  },
-]
+  relatedContent: [
+    {
+      name: String,
+      thumbnail: String,
+      price: String,
+      hoverinfo: {
+        releasedate: String,
+        gif: String,
+        reviews: String,
+        totalReviews: Number,
+        tag: Array,
+      },
+    },
+    {
+      name: String,
+      thumbnail: String,
+      price: String,
+      hoverinfo: {
+        releasedate: String,
+        gif: String,
+        reviews: String,
+        totalReviews: Number,
+        tag: Array,
+      },
+    },
+    {
+      name: String,
+      thumbnail: String,
+      price: String,
+      hoverinfo: {
+        releasedate: String,
+        gif: String,
+        reviews: String,
+        totalReviews: Number,
+        tag: Array,
+      },
+    },
+    {
+      name: String,
+      thumbnail: String,
+      price: String,
+      hoverinfo: {
+        releasedate: String,
+        gif: String,
+        reviews: String,
+        totalReviews: Number,
+        tag: Array,
+      },
+    },
+    {
+      name: String,
+      thumbnail: String,
+      price: String,
+      hoverinfo: {
+        releasedate: String,
+        gif: String,
+        reviews: String,
+        totalReviews: Number,
+        tag: Array,
+      },
+    },
+  ],
 });
 
-const Game = mongoose.model('Game', gameSchema);
+const Game = mongoose.model("Game", gameSchema);
 
 // const relatedContent = new mongoose.Schema({
 //   name: String,
@@ -97,8 +103,8 @@ const Game = mongoose.model('Game', gameSchema);
 //       price: String,
 //       hoverinfo: {
 //         releasedate: String,
-//         gif: String, 
-//         reviews: String, 
+//         gif: String,
+//         reviews: String,
 //         totalReviews: Number,
 //         tag: Array
 //   }
@@ -108,14 +114,14 @@ const Game = mongoose.model('Game', gameSchema);
 
 // METHODS
 const getOne = (query, callback) => {
-  Game.find({_id: query._id}).exec((err, res) => {
+  Game.find({ proxyId: query }).exec((err, res) => {
     if (err) {
-      console.log('error in getOne');
+      console.log("error in getOne");
       throw err;
     } else {
       callback(null, res);
       // console.log(res);
-      console.log('getOne success');
+      console.log("getOne success");
     }
   });
 };
@@ -123,11 +129,11 @@ const getOne = (query, callback) => {
 const getRelatedContent = (callback) => {
   Related.find({}).exec((err, res) => {
     if (err) {
-      console.log('error in getRelatedContent');
+      console.log("error in getRelatedContent");
       throw err;
     } else {
       callback(null, res);
-      console.log('getRelatedContent success');
+      console.log("getRelatedContent success");
     }
   });
 };
