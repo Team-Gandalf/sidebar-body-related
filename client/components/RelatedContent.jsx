@@ -1,12 +1,8 @@
-import React from "react";
-import EachPicture from "./sub-components/EachPicture.jsx";
-import Slider from "react-slick";
+import React from 'react';
+import Slider from 'react-slick';
+import EachPicture from './sub-components/EachPicture.jsx';
 
 class RelatedContent extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const settings = {
       dots: true,
@@ -15,14 +11,14 @@ class RelatedContent extends React.Component {
       slidesToShow: 3,
       slidesToScroll: 3,
     };
-    var data = this.props;
-    console.log("related content props: ", data);
+    const data = this.props;
+    // console.log('related content props: ', data);
     return (
       <div className="leftcolumn">
         <h2>MORE FROM HALF-LIFE FRANCHISE</h2>
         <Slider {...settings}>
           {data.relatedcontent.map((item, i) => (
-            <EachPicture item={item} key={item._id} index={i} />
+            <EachPicture item={item} key={item} index={i} />
           ))}
         </Slider>
       </div>

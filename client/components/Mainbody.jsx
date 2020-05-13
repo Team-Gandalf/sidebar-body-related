@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import RelatedContent from "./RelatedContent.jsx";
+import React, { useState } from 'react';
+import RelatedContent from './RelatedContent.jsx';
 
 const Mainbody = (props) => {
-  console.log("mainbody props: ", props);
-  const description = props.mainbodydata.description;
+  // console.log('mainbody props: ', props);
+  const { description } = props.mainbodydata;
   const matureContent = props.mainbodydata.maturecontent[0].description.join(
-    ", "
+    ', ',
   );
-  const os = props.mainbodydata.sysrequirement.os.join(", ");
-  const processor = props.mainbodydata.sysrequirement.processor;
-  const memory = props.mainbodydata.sysrequirement.memory;
+  const os = props.mainbodydata.sysrequirement.os.join(', ');
+  const { processor } = props.mainbodydata.sysrequirement;
+  const { memory } = props.mainbodydata.sysrequirement;
   const gphx = props.mainbodydata.sysrequirement.graphics;
 
   const [show, setShow] = useState(false);
@@ -19,8 +19,8 @@ const Mainbody = (props) => {
     setBtn(!btn);
   };
 
-  let more = show ? "d-block" : "d-none";
-  let go = btn ? "d-block" : "d-none";
+  const more = show ? 'd-block' : 'd-none';
+  const go = btn ? 'd-block' : 'd-none';
 
   return (
     <div className="leftcolumn">
@@ -29,6 +29,7 @@ const Mainbody = (props) => {
         <p id="mainbodytext">{description}</p>
         <img
           id="mainbodyimage"
+          alt=""
           src={props.mainbodydata.images[0]}
           width="50%"
           height="50%"
@@ -65,16 +66,24 @@ const Mainbody = (props) => {
         <h2>SYSTEM REQUIREMENTS:</h2>
         <div id="sysspec">MINIMUM:</div>
         <div id="sysspec">
-          OS: <span id="sysmin">{os}</span>
+          OS:
+          {' '}
+          <span id="sysmin">{os}</span>
         </div>
         <div id="sysspec">
-          Processor: <span id="sysmin">{processor}</span>
+          Processor:
+          {' '}
+          <span id="sysmin">{processor}</span>
         </div>
         <div id="sysspec">
-          Memory: <span id="sysmin">{memory}</span>
+          Memory:
+          {' '}
+          <span id="sysmin">{memory}</span>
         </div>
         <div id="sysspec">
-          Graphics: <span id="sysmin">{gphx}</span>
+          Graphics:
+          {' '}
+          <span id="sysmin">{gphx}</span>
         </div>
       </div>
 

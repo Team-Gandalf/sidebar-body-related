@@ -1,15 +1,14 @@
-import React from "react";
-import Languages from "./sub-components/Languages.jsx";
-import Achievements from "./sub-components/Achievements.jsx";
-import Subdescription from "./sub-components/Subdescription.jsx";
-import VRsupport from "./sub-components/VRsupport.jsx";
-import Minidescription from "./sub-components/Minidescription.jsx";
+import React from 'react';
+import Languages from './sub-components/Languages.jsx';
+import Achievements from './sub-components/Achievements.jsx';
+import Subdescription from './sub-components/Subdescription.jsx';
+import VRsupport from './sub-components/VRsupport.jsx';
+import Minidescription from './sub-components/Minidescription.jsx';
 
 const SideBar = (props) => {
-  console.log("sidebar props: ", props.sidebardata);
+  // console.log('sidebar props: ', props.sidebardata);
   const { metacritic } = props.sidebardata;
-  let backgroundColor =
-    metacritic < 50 ? "red" : metacritic < 76 ? "yellow" : "green";
+  const backgroundColor = metacritic < 50 ? 'red' : metacritic < 76 ? 'yellow' : 'green';
 
   return (
     <div className="rightcolumn">

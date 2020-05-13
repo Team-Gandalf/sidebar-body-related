@@ -1,6 +1,6 @@
-const app = require("./index.js");
+const app = require('./index.js');
 
-var hostname = "localhost";
+const hostname = 'localhost';
 const port = 1991;
 
 app.listen(port, hostname, () => {

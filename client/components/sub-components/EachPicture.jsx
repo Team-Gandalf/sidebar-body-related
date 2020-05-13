@@ -1,5 +1,5 @@
-import React from "react";
-import { Tooltip } from "reactstrap";
+import React from 'react';
+import { Tooltip } from 'reactstrap';
 
 class EachPicture extends React.Component {
   constructor(props) {
@@ -16,14 +16,18 @@ class EachPicture extends React.Component {
 
   render() {
     const { item } = this.props;
-    const { thumbnail, price, name, hoverinfo } = item;
-    const { gif, reviews, totalReviews, tag } = hoverinfo;
-    const releasedate =
-      hoverinfo.releasedate.substring(4, 10) +
-      ", " +
-      hoverinfo.releasedate.substring(11, 15);
+    const {
+      thumbnail, price, name, hoverinfo,
+    } = item;
+    const {
+      gif, reviews, totalReviews, tag,
+    } = hoverinfo;
+    const releasedate = `${hoverinfo.releasedate.substring(
+      4,
+      10,
+    )}, ${hoverinfo.releasedate.substring(11, 15)}`;
 
-    console.log("index: ", this.props.index);
+    // console.log('index: ', this.props.index);
     return (
       <div className="item" id={`id${this.props.index}`}>
         <div className="item-img-wrap">
@@ -31,7 +35,10 @@ class EachPicture extends React.Component {
         </div>
         <div className="content">
           <p>{name}</p>
-          <p>${price}</p>
+          <p>
+            $
+            {price}
+          </p>
         </div>
         <div>
           <Tooltip
@@ -44,19 +51,24 @@ class EachPicture extends React.Component {
               <h4>{name}</h4>
               <p className="c-black">{releasedate}</p>
               <div className="tooltip-img-wrap">
-                <img src={gif} width="50" height="50"></img>
+                <img src={gif} alt="" width="50" height="50" />
               </div>
               <div className="reviews">
                 <p> Overall User Reviews </p>
                 <p>
-                  <span className="c-blue">{reviews}</span>{" "}
-                  <span>({totalReviews}) reviews</span>
+                  <span className="c-blue">{reviews}</span>
+                  {' '}
+                  <span>
+                    (
+                    {totalReviews}
+                    ) reviews
+                  </span>
                 </p>
               </div>
               <h6>User tags:</h6>
               <div className="tag-flex">
                 {tag.map((t) => (
-                  <span>{t}</span>
+                  <span key={t}>{t}</span>
                 ))}
               </div>
             </div>

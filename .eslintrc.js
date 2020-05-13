@@ -4,13 +4,10 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
+  extends: ["plugin:react/recommended", "airbnb"],
   globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
   },
   parserOptions: {
     ecmaFeatures: {
@@ -18,10 +15,11 @@ module.exports = {
     },
     ecmaVersion: 2018,
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ["react"],
   rules: {
-    'no-console' : 'off',
+    "react/prop-types": 0,
+    "react/destructuring-assignment": 0,
+    "import/extensions": 0,
+    "jsx-a11y/alt-text": 0,
   },
 };

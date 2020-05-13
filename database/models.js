@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const config = require("./config.js");
+const mongoose = require('mongoose');
+const config = require('./config.js');
 
 // SCHEMAS
 const gameSchema = new mongoose.Schema({
@@ -95,7 +95,7 @@ const gameSchema = new mongoose.Schema({
   ],
 });
 
-const Game = mongoose.model("Game", gameSchema);
+const Game = mongoose.model('Game', gameSchema);
 
 // const relatedContent = new mongoose.Schema({
 //   name: String,
@@ -116,17 +116,17 @@ const Game = mongoose.model("Game", gameSchema);
 const getOne = (query, callback) => {
   Game.find({ proxyId: query }).exec((err, res) => {
     if (err) {
-      console.log("error in getOne");
+      // console.log("error in getOne");
       throw err;
     } else {
       callback(null, res);
       // console.log(res);
-      console.log("getOne success");
+      // console.log("getOne success");
     }
   });
 };
 
-const getRelatedContent = (callback) => {
+const getRelatedContent = () => {
   // Related.find({}).exec((err, res) => {
   //   if (err) {
   //     console.log("error in getRelatedContent");

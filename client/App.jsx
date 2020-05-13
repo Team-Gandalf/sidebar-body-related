@@ -1,10 +1,10 @@
-import React from "react";
-import axios from "axios";
+import React from 'react';
+import axios from 'axios';
 
-import Mainbody from "./components/Mainbody.jsx";
-import Sidebar from "./components/Sidebar.jsx";
+import Mainbody from './components/Mainbody.jsx';
+import Sidebar from './components/Sidebar.jsx';
 
-let proxyId = window.location.search.substring(2);
+const proxyId = window.location.search.substring(2);
 
 class App extends React.Component {
   constructor() {
@@ -17,7 +17,7 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-      .get("/mainbody", {
+      .get('/mainbody', {
         params: {
           _id: proxyId,
         },
@@ -28,16 +28,15 @@ class App extends React.Component {
           game: res.data[0],
         });
         this.setState({ loading: false });
-        console.log("after setState: ", this.state);
+        // console.log('after setState: ', this.state);
       })
-      .catch((err) => {
+      .catch(() => {
         this.setState({ loading: false });
-        this.setState({ err });
       });
   }
 
   render() {
-    console.log(proxyId);
+    // console.log(proxyId);
     const { game, loading } = this.state;
     // if(loading === false) console.log("this.state in render is", game.mainbody);
     return (
@@ -49,12 +48,12 @@ class App extends React.Component {
               relatedcontent={game.relatedContent}
             />
           ) : (
-            "Main body loading..."
+            'Main body loading...'
           )}
           {loading === false ? (
             <Sidebar sidebardata={game.sidebar} name={game.name} />
           ) : (
-            " Side bar content loading..."
+            ' Side bar content loading...'
           )}
         </div>
       </div>
