@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const config = require('./config.js');
+const mongoose = require("mongoose");
+const config = require("./config.js");
 
 // SCHEMAS
 const gameSchema = new mongoose.Schema({
@@ -95,22 +95,7 @@ const gameSchema = new mongoose.Schema({
   ],
 });
 
-const Game = mongoose.model('Game', gameSchema);
-
-// const relatedContent = new mongoose.Schema({
-//   name: String,
-//       thumbnail : String,
-//       price: String,
-//       hoverinfo: {
-//         releasedate: String,
-//         gif: String,
-//         reviews: String,
-//         totalReviews: Number,
-//         tag: Array
-//   }
-// });
-
-// const Related = mongoose.model('Related', relatedContent);
+const Game = mongoose.model("Game", gameSchema);
 
 // METHODS
 const getOne = (query, callback) => {
@@ -121,24 +106,10 @@ const getOne = (query, callback) => {
     } else {
       callback(null, res);
       // console.log(res);
-      // console.log("getOne success");
+      console.log("getOne success");
     }
   });
 };
 
-const getRelatedContent = () => {
-  // Related.find({}).exec((err, res) => {
-  //   if (err) {
-  //     console.log("error in getRelatedContent");
-  //     throw err;
-  //   } else {
-  //     callback(null, res);
-  //     console.log("getRelatedContent success");
-  //   }
-  // });
-};
-
 module.exports.getOne = getOne;
-module.exports.getRelatedContent = getRelatedContent;
-// module.exports.Related = Related;
 module.exports.Game = Game;

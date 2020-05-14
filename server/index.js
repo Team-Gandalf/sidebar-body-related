@@ -21,14 +21,4 @@ app.get("/mainbody", (req, res) => {
   });
 });
 
-// app.get("/related-content", (req, res) => {
-//   models.getRelatedContent((err, data) => {
-//     if (err) {
-//       res.status(404).send(err);
-//     } else {
-//       res.status(200).send(data);
-//     }
-//   });
-// });
-
 module.exports = app;
