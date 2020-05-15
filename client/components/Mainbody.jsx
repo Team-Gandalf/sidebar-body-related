@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import RelatedContent from './RelatedContent.jsx';
+import React, { useState } from "react";
+import RelatedContent from "./RelatedContent.jsx";
 
 import {
   LeftColumn,
@@ -14,15 +14,15 @@ import {
   SystemSpec,
   SystemMin,
   Strong,
-} from '../StyledComponents.jsx';
+} from "../StyledComponents.jsx";
 
 const Mainbody = (props) => {
   // console.log('mainbody props: ', props);
   const { description } = props.mainbodydata;
   const matureContent = props.mainbodydata.maturecontent[0].description.join(
-    ', ',
+    ", "
   );
-  const os = props.mainbodydata.sysrequirement.os.join(', ');
+  const os = props.mainbodydata.sysrequirement.os.join(", ");
   const { processor } = props.mainbodydata.sysrequirement;
   const { memory } = props.mainbodydata.sysrequirement;
   const gphx = props.mainbodydata.sysrequirement.graphics;
@@ -40,7 +40,7 @@ const Mainbody = (props) => {
       <div>
         <MainBodyText>{description}</MainBodyText>
         <MainBodyImage alt="" src={props.mainbodydata.images[0]} />
-        <div style={{ display: show ? 'table-row' : 'none' }}>
+        <div style={{ display: show ? "table-row" : "none" }}>
           <MainBodyText>{description}</MainBodyText>
           <MainBodyImage src={props.mainbodydata.images[1]} />
           <MainBodyText>{description}</MainBodyText>
@@ -50,7 +50,7 @@ const Mainbody = (props) => {
         </div>
       </div>
       <ShowWrap>
-        <a onClick={showMore} style={{ display: btn ? 'table-row' : 'none' }}>
+        <a onClick={showMore} style={{ display: btn ? "table-row" : "none" }}>
           Show more
         </a>
       </ShowWrap>
@@ -66,24 +66,16 @@ const Mainbody = (props) => {
         <Heading2>SYSTEM REQUIREMENTS:</Heading2>
         <SystemSpec>MINIMUM:</SystemSpec>
         <SystemSpec>
-          OS:
-          {' '}
-          <SystemMin>{os}</SystemMin>
+          OS: <SystemMin>{os}</SystemMin>
         </SystemSpec>
         <SystemSpec>
-          Processor:
-          {' '}
-          <SystemMin>{processor}</SystemMin>
+          Processor: <SystemMin>{processor}</SystemMin>
         </SystemSpec>
         <SystemSpec>
-          Memory:
-          {' '}
-          <SystemMin>{memory}</SystemMin>
+          Memory: <SystemMin>{memory}</SystemMin>
         </SystemSpec>
         <SystemSpec>
-          Graphics:
-          {' '}
-          <SystemMin>{gphx}</SystemMin>
+          Graphics: <SystemMin>{gphx}</SystemMin>
         </SystemSpec>
       </div>
 
