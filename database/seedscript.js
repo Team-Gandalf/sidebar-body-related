@@ -1,80 +1,80 @@
-const faker = require('faker');
-const models = require('./models.js');
+const faker = require("faker");
+const models = require("./models.js");
 
 const { Game } = models;
 // const { Related } = models;
 
 const mContent = [
-  'Alcohol Reference',
-  'Blood',
-  'Cartoon Violence',
-  'Crude Humor',
-  'Fantasy Violence',
-  'Language',
-  'Mature Humor',
-  'Partial Nudity',
-  'Sexual Content',
-  'Sexual Violence',
-  'Strong Language',
-  'Strong Sexual Content',
-  'Tobacco Reference',
-  'Use of Drugs',
-  'Violence',
-  'Animated Blood',
-  'Blood and Gore',
-  'Comic Mischief',
-  'Drug Reference',
-  'Intense Violence',
-  'Lyrics',
-  'Nudity',
-  'Real Gambling',
-  'Sexual Themes',
-  'Simulated Gambling',
-  'Strong Lyrics',
-  'Suggestive Themes',
-  'Use of Alcohol',
-  'Use of Tobacco',
-  'Violent References',
+  "Alcohol Reference",
+  "Blood",
+  "Cartoon Violence",
+  "Crude Humor",
+  "Fantasy Violence",
+  "Language",
+  "Mature Humor",
+  "Partial Nudity",
+  "Sexual Content",
+  "Sexual Violence",
+  "Strong Language",
+  "Strong Sexual Content",
+  "Tobacco Reference",
+  "Use of Drugs",
+  "Violence",
+  "Animated Blood",
+  "Blood and Gore",
+  "Comic Mischief",
+  "Drug Reference",
+  "Intense Violence",
+  "Lyrics",
+  "Nudity",
+  "Real Gambling",
+  "Sexual Themes",
+  "Simulated Gambling",
+  "Strong Lyrics",
+  "Suggestive Themes",
+  "Use of Alcohol",
+  "Use of Tobacco",
+  "Violent References",
 ];
 const languages = [
-  'English',
-  'French',
-  'German',
-  'SpanishSpain',
-  'Japanese',
-  'Korean',
-  'Russian',
-  'SimplifiedChinese',
-  'SpanishLatin America',
-  'TraditionalChinese',
+  "English",
+  "French",
+  "German",
+  "SpanishSpain",
+  "Japanese",
+  "Korean",
+  "Russian",
+  "SimplifiedChinese",
+  "SpanishLatinAmerica",
+  "TraditionalChinese",
 ];
-const gameOS = ['Windows 10', 'Mac OSX', 'Linux'];
-const proc = ['Core i5-7500', 'Core i5-7600', 'Core i5-7700', 'Core i5-7800'];
-const mem = ['2GB RAM', '4GB RAM', '8GB RAM', '12GB RAM', '16GB RAM'];
+const gameOS = ["Windows 10", "Mac OSX", "Linux"];
+const proc = ["Core i5-7500", "Core i5-7600", "Core i5-7700", "Core i5-7800"];
+const mem = ["2GB RAM", "4GB RAM", "8GB RAM", "12GB RAM", "16GB RAM"];
 const gphx = [
-  'GTX 1060 / RX 580 - 6GB VRAM',
-  'GTX 1050 / RX 570 - 4GB VRAM',
-  'GTX 1040 / RX 560 - 2GB VRAM',
+  "GTX 1060 / RX 580 - 6GB VRAM",
+  "GTX 1050 / RX 570 - 4GB VRAM",
+  "GTX 1040 / RX 560 - 2GB VRAM",
 ];
 const genres = [
-  'Action',
-  'Action-adventure',
-  'Role-playing',
-  'Simulation',
-  'Strategy',
-  'Puzzle',
-  'Idea',
+  "Action",
+  "Action-adventure",
+  "Role-playing",
+  "Simulation",
+  "Strategy",
+  "Puzzle",
+  "Idea",
 ];
 const reviewRatings = [
-  'Overwhelmingly Positive',
-  'Very Positive',
-  'Positive',
-  'Mostly Positive',
-  'Mixed',
-  'Mostly Negative',
-  'Negative',
-  'Very Negative',
-  'Overwhelmingly Negative',
+  "Overwhelmingly Positive",
+  "Very Positive",
+  "Positive",
+  "Mostly Positive",
+  "Mixed",
+  "Mostly Negative",
+  "Negative",
+  "Very Negative",
+  "Overwhelmingly Negative",
 ];
 const achieves = [];
 for (let j = 0; j < 25; j += 1) {
@@ -82,26 +82,26 @@ for (let j = 0; j < 25; j += 1) {
 }
 
 const allTags = [
-  'Masterpiece',
-  'Action',
-  'VR',
-  'Adventure',
-  'Female Protagonist',
-  'Story Rich',
-  'Atmospheric',
-  'Singleplayer',
-  'FPS',
-  'Horror',
-  'Sci-fi',
-  'First-Person',
-  'Shooter',
-  'Aliens',
-  'Beautiful',
-  'Zombies',
-  'Futuristic',
-  'Great Soundtrack',
-  'Psychological Horror',
-  'Memes',
+  "Masterpiece",
+  "Action",
+  "VR",
+  "Adventure",
+  "Female Protagonist",
+  "Story Rich",
+  "Atmospheric",
+  "Singleplayer",
+  "FPS",
+  "Horror",
+  "Sci-fi",
+  "First-Person",
+  "Shooter",
+  "Aliens",
+  "Beautiful",
+  "Zombies",
+  "Futuristic",
+  "Great Soundtrack",
+  "Psychological Horror",
+  "Memes",
 ];
 
 const xTags = [];
@@ -271,7 +271,7 @@ const saveInfo = () => {
       if (err) {
         return console.log(err);
       }
-      return console.log('successfully generated game info');
+      return console.log("successfully generated game info");
     });
   }
 };

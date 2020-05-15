@@ -1,48 +1,49 @@
-import React from 'react';
+import React from "react";
+import {
+  SideBarItem,
+  SideBarItemElement,
+  SideBarImage,
+  SideBarText,
+} from "../../StyledComponents.jsx";
 
 const Subdescription = (props) => (
   // console.log('subdescription props: ', props);
-  <div className="sidebaritem">
-    <div id="sidebaritemele">
-      <img src={props.subdescription.player[1]} alt="" width="26" height="16" />
-      {' '}
-      {props.subdescription.player[0]}
-    </div>
-    <div id="sidebaritemele">
-      <img
-        src={props.subdescription.achievements[1]}
+  <SideBarItem>
+    <SideBarItemElement>
+      <SideBarImage
+        src="https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_singlePlayer.png"
         alt=""
-        width="26"
-        height="16"
       />
-      {' '}
-      {props.subdescription.achievements[0]}
-    </div>
-    <div id="sidebaritemele">
-      <img
-        src={props.subdescription.captions[1]}
+      <SideBarText>{props.subdescription.player[0]}</SideBarText>
+    </SideBarItemElement>
+    <SideBarItemElement>
+      <SideBarImage
+        src="https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_achievements.png"
         alt=""
-        width="26"
-        height="16"
       />
-      {' '}
-      {props.subdescription.captions[0]}
-    </div>
-    <div id="sidebaritemele">
-      <img
-        src={props.subdescription.workshop[1]}
+      <SideBarText>{props.subdescription.achievements[0]}</SideBarText>
+    </SideBarItemElement>
+    <SideBarItemElement>
+      <SideBarImage
+        src="https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_cc.png"
         alt=""
-        width="26"
-        height="16"
       />
-      {' '}
-      {props.subdescription.workshop[0]}
-    </div>
-    <div id="sidebaritemele">
-      <img src={props.subdescription.editor[1]} alt="" width="26" height="16" />
-      {' '}
-      {props.subdescription.editor[0]}
-    </div>
-  </div>
+      <SideBarText>{props.subdescription.captions[0]}</SideBarText>
+    </SideBarItemElement>
+    <SideBarItemElement>
+      <SideBarImage
+        src="https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_workshop.png"
+        alt=""
+      />
+      <SideBarText>{props.subdescription.workshop[0]}</SideBarText>
+    </SideBarItemElement>
+    <SideBarItemElement>
+      <SideBarImage
+        src="https://steamstore-a.akamaihd.net/public/images/v6/ico/ico_editor.png"
+        alt=""
+      />
+      <SideBarText>{props.subdescription.editor[0]}</SideBarText>
+    </SideBarItemElement>
+  </SideBarItem>
 );
 export default Subdescription;
