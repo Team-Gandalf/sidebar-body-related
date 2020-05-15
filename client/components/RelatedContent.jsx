@@ -1,9 +1,9 @@
-import React from 'react';
-import Slider from 'react-slick';
-import EachPicture from './sub-components/EachPicture.jsx';
-import { LeftColumn, Heading2 } from '../StyledComponents.jsx';
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import React from "react";
+import Slider from "react-slick";
+import EachPicture from "./sub-components/EachPicture.jsx";
+import { LeftColumn, Heading2, SlideWrapper } from "../StyledComponents.jsx";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 class RelatedContent extends React.Component {
   render() {
@@ -19,11 +19,13 @@ class RelatedContent extends React.Component {
     return (
       <LeftColumn>
         <Heading2>MORE FROM HALF-LIFE FRANCHISE</Heading2>
-        <Slider {...settings}>
-          {data.relatedcontent.map((item, i) => (
-            <EachPicture item={item} key={item} index={i} />
-          ))}
-        </Slider>
+        <SlideWrapper>
+          <Slider {...settings}>
+            {data.relatedcontent.map((item, i) => (
+              <EachPicture item={item} key={item} index={i} />
+            ))}
+          </Slider>
+        </SlideWrapper>
       </LeftColumn>
     );
   }

@@ -1,8 +1,10 @@
-import React from 'react';
-import axios from 'axios';
+import React from "react";
+import axios from "axios";
 
-import Mainbody from './components/Mainbody.jsx';
-import Sidebar from './components/Sidebar.jsx';
+import Mainbody from "./components/Mainbody.jsx";
+import Sidebar from "./components/Sidebar.jsx";
+
+import { GlobalStyle } from "./StyledComponents.jsx";
 
 const proxyId = window.location.search.substring(2);
 
@@ -17,7 +19,7 @@ class App extends React.Component {
 
   componentDidMount() {
     axios
-      .get('/mainbody', {
+      .get("/mainbody", {
         params: {
           _id: proxyId,
         },
@@ -41,21 +43,22 @@ class App extends React.Component {
     // if(loading === false) console.log("this.state in render is", game.mainbody);
     return (
       <div>
-        <div>
-          {loading === false ? (
-            <Mainbody
-              mainbodydata={game.mainbody}
-              relatedcontent={game.relatedContent}
-            />
-          ) : (
-            'Main body loading...'
-          )}
-          {loading === false ? (
-            <Sidebar sidebardata={game.sidebar} name={game.name} />
-          ) : (
-            ' Side bar content loading...'
-          )}
-        </div>
+        <>
+          <GlobalStyle />
+        </>
+        {loading === false ? (
+          <Mainbody
+            mainbodydata={game.mainbody}
+            relatedcontent={game.relatedContent}
+          />
+        ) : (
+          "Main body loading..."
+        )}
+        {loading === false ? (
+          <Sidebar sidebardata={game.sidebar} name={game.name} />
+        ) : (
+          " Side bar content loading..."
+        )}
       </div>
     );
   }

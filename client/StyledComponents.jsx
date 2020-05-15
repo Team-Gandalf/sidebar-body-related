@@ -1,4 +1,26 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+  body {
+    background-color: #1b2838;
+    color: #acb2b8;
+    font-family: sans-serif;
+    font-weight: normal;
+    margin: 0 auto;
+    padding: 0;
+    width: 940px;
+  }
+`;
+
+export const body = styled.body`
+  background-color: #1b2838;
+  color: #acb2b8;
+  font-family: sans-serif;
+  font-weight: normal;
+  margin: 0 auto;
+  padding: 0;
+  width: 940px;
+`;
 
 export const LeftColumn = styled.div`
   color: #acb2b8;
@@ -338,6 +360,12 @@ export const ToolTipSpan = styled.span`
   background-color: rgba(107, 138, 155, 0.5);
   padding: 5px;
   color: white;
+`;
+
+export const SlideWrapper = styled.div`
+  max-width: 566px;
+  width: 100%;
+  margin-left: 25px;
 `;
 
 // export const
