@@ -1,4 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import {
+  SideBarItem,
+  SystemSpec,
+  LanguageColumnTitle,
+  LanguageEach,
+  LanguagesCheckMark,
+} from "../../StyledComponents.jsx";
 
 const Languages = (props) => {
   const [show, setShow] = useState(false);
@@ -8,148 +15,109 @@ const Languages = (props) => {
     setBtn(!btn);
   };
 
-  const more = show ? 'd-block' : 'd-none';
-  const go = btn ? 'd-block' : 'd-none';
-  // console.log('languages props: ', props);
   return (
-    <div className="sidebaritem">
-      <div id="sidebartitle">Languages: </div>
+    <SideBarItem>
+      <SystemSpec>Languages: </SystemSpec>
       <table>
         <tbody>
           <tr>
             <th />
-            <th id="columntitle">Interface</th>
-            <th id="columntitle">Full Audio</th>
-            <th id="columntitle">Subtitles</th>
+            <LanguageColumnTitle>Interface</LanguageColumnTitle>
+            <LanguageColumnTitle>Full Audio</LanguageColumnTitle>
+            <LanguageColumnTitle>Subtitles</LanguageColumnTitle>
           </tr>
           <tr>
-            <td id="sidebartitle">English</td>
-            <td id="languagescheckmark">
-              {props.languages.English[0] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.English[1] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.English[2] ? '✔' : null}
-            </td>
+            <LanguageEach>English</LanguageEach>
+            {props.languages.English.map((item, i) => (
+              <LanguagesCheckMark key={i}>
+                {item ? "✔" : null}
+              </LanguagesCheckMark>
+            ))}
           </tr>
           <tr>
-            <td id="sidebartitle">French</td>
-            <td id="languagescheckmark">
-              {props.languages.French[0] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.French[1] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.French[2] ? '✔' : null}
-            </td>
+            <LanguageEach>French</LanguageEach>
+            {props.languages.French.map((item, i) => (
+              <LanguagesCheckMark key={i}>
+                {item ? "✔" : null}
+              </LanguagesCheckMark>
+            ))}
           </tr>
           <tr>
-            <td id="sidebartitle">German</td>
-            <td id="languagescheckmark">
-              {props.languages.German[0] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.German[1] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.German[2] ? '✔' : null}
-            </td>
+            <LanguageEach>German</LanguageEach>
+            {props.languages.German.map((item, i) => (
+              <LanguagesCheckMark key={i}>
+                {item ? "✔" : null}
+              </LanguagesCheckMark>
+            ))}
           </tr>
           <tr>
-            <td id="sidebartitle">Japanese</td>
-            <td id="languagescheckmark">
-              {props.languages.Japanese[0] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.Japanese[1] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.Japanese[2] ? '✔' : null}
-            </td>
+            <LanguageEach>Japanese</LanguageEach>
+            {props.languages.Japanese.map((item, i) => (
+              <LanguagesCheckMark key={i}>
+                {item ? "✔" : null}
+              </LanguagesCheckMark>
+            ))}
           </tr>
           <tr>
-            <td id="sidebartitle">Korean</td>
-            <td id="languagescheckmark">
-              {props.languages.Korean[0] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.Korean[1] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.Korean[2] ? '✔' : null}
-            </td>
+            <LanguageEach>Korean</LanguageEach>
+            {props.languages.Korean.map((item, i) => (
+              <LanguagesCheckMark key={i}>
+                {item ? "✔" : null}
+              </LanguagesCheckMark>
+            ))}
           </tr>
-          <tr className={more}>
-            <td id="sidebartitle">Russian</td>
-            <td id="languagescheckmark">
-              {props.languages.Russian[0] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.Russian[1] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.Russian[2] ? '✔' : null}
-            </td>
+          <tr style={{ display: show ? "table-row" : "none" }}>
+            <LanguageEach>Russian</LanguageEach>
+            {props.languages.Russian.map((item, i) => (
+              <LanguagesCheckMark key={i}>
+                {item ? "✔" : null}
+              </LanguagesCheckMark>
+            ))}
           </tr>
-          <tr className={more}>
-            <td id="sidebartitle">Simplified-Chinese</td>
-            <td id="languagescheckmark">
-              {props.languages.SimplifiedChinese[0] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.SimplifiedChinese[1] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.SimplifiedChinese[2] ? '✔' : null}
-            </td>
+          <tr style={{ display: show ? "table-row" : "none" }}>
+            <LanguageEach>Simplified-Chinese</LanguageEach>
+            {props.languages.SimplifiedChinese.map((item, i) => (
+              <LanguagesCheckMark key={i}>
+                {item ? "✔" : null}
+              </LanguagesCheckMark>
+            ))}
           </tr>
-          <tr className={more}>
-            <td id="sidebartitle">Spanish-Latin America</td>
-            <td id="languagescheckmark">
-              {props.languages.SpanishSpain[0] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.SpanishSpain[1] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.SpanishSpain[2] ? '✔' : null}
-            </td>
+          <tr style={{ display: show ? "table-row" : "none" }}>
+            <LanguageEach>Spanish-Latin America</LanguageEach>
+            {props.languages.SpanishSpain.map((item, i) => (
+              <LanguagesCheckMark key={i}>
+                {item ? "✔" : null}
+              </LanguagesCheckMark>
+            ))}
           </tr>
-          <tr className={more}>
-            <td id="sidebartitle">Spanish-Spain</td>
-            <td id="languagescheckmark">
-              {props.languages.SpanishSpain[0] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.SpanishSpain[1] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.SpanishSpain[2] ? '✔' : null}
-            </td>
+          <tr style={{ display: show ? "table-row" : "none" }}>
+            <LanguageEach>Spanish-Spain</LanguageEach>
+            {props.languages.SpanishSpain.map((item, i) => (
+              <LanguagesCheckMark key={i}>
+                {item ? "✔" : null}
+              </LanguagesCheckMark>
+            ))}
           </tr>
-          <tr className={more}>
-            <td id="sidebartitle">Traditional-Chinese</td>
-            <td id="languagescheckmark">
-              {props.languages.TraditionalChinese[0] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.TraditionalChinese[1] ? '✔' : null}
-            </td>
-            <td id="languagescheckmark">
-              {props.languages.TraditionalChinese[2] ? '✔' : null}
-            </td>
+          <tr style={{ display: show ? "table-row" : "none" }}>
+            <LanguageEach>Traditional-Chinese</LanguageEach>
+            {props.languages.TraditionalChinese.map((item, i) => (
+              <LanguagesCheckMark key={i}>
+                {item ? "✔" : null}
+              </LanguagesCheckMark>
+            ))}
           </tr>
         </tbody>
       </table>
       <div>
-        <a role="button" onClick={showMore} className={go}>
-          Show more languages
+        <a
+          role="button"
+          onClick={showMore}
+          style={{ display: btn ? "table-row" : "none" }}
+        >
+          Show more
         </a>
       </div>
-    </div>
+    </SideBarItem>
   );
 };
 

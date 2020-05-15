@@ -1,64 +1,62 @@
-import React from 'react';
+import React from "react";
+import {
+  SideBarItem,
+  SideBarItemElement,
+  MiniDescriptionValue,
+  MiniDescriptionUrl,
+  MiniDescriptionQuery,
+} from "../../StyledComponents.jsx";
 
 const Minidescription = (props) => {
-  const genres = props.minidescription.genre.join(', ');
-  const releasedate = `${props.minidescription.releasedate.substring(4, 10)}, ${props.minidescription.releasedate.substring(11, 15)}`;
+  const genres = props.minidescription.genre.join(", ");
+  const releasedate = `${props.minidescription.releasedate.substring(
+    4,
+    10
+  )}, ${props.minidescription.releasedate.substring(11, 15)}`;
   // console.log('Minidescription props: ', props);
   return (
-    <div className="sidebaritem">
+    <SideBarItem>
       <div>
-        <span id="sysspec">TITLE:</span>
-        <span id="minidescriptionvalue">
-          {' '}
-          {props.name}
-        </span>
+        <MiniDescriptionQuery>TITLE:</MiniDescriptionQuery>
+        <MiniDescriptionValue> {props.name}</MiniDescriptionValue>
       </div>
       <div>
-        <span id="sysspec">GENRE:</span>
-        <span id="minidescriptionurl">
-          {' '}
-          {genres}
-        </span>
+        <MiniDescriptionQuery>GENRE:</MiniDescriptionQuery>
+        <MiniDescriptionUrl> {genres}</MiniDescriptionUrl>
       </div>
       <div>
-        <span id="sysspec">DEVELOPER:</span>
-        <span id="minidescriptionurl">
-          {' '}
+        <MiniDescriptionQuery>DEVELOPER:</MiniDescriptionQuery>
+        <MiniDescriptionUrl>
           {props.minidescription.developer}
-        </span>
+        </MiniDescriptionUrl>
       </div>
       <div>
-        <span id="sysspec">PUBLISHER:</span>
-        <span id="minidescriptionurl">
-          {' '}
+        <MiniDescriptionQuery>PUBLISHER:</MiniDescriptionQuery>
+        <MiniDescriptionUrl>
           {props.minidescription.publisher}
-        </span>
+        </MiniDescriptionUrl>
       </div>
       <div>
-        <span id="sysspec">FRANCHISE:</span>
-        <span id="minidescriptionvalue">
-          {' '}
+        <MiniDescriptionQuery>FRANCHISE:</MiniDescriptionQuery>
+        <MiniDescriptionValue>
           {props.minidescription.franchise}
-        </span>
+        </MiniDescriptionValue>
       </div>
       <div>
-        <span id="sysspec">RELEASE DATE:</span>
-        <span id="minidescriptionvalue">
-          {' '}
-          {releasedate}
-        </span>
+        <MiniDescriptionQuery>RELEASE DATE:</MiniDescriptionQuery>
+        <MiniDescriptionValue> {releasedate}</MiniDescriptionValue>
       </div>
       <br />
       <div>
-        <div id="minidescriptionlinks"><a href="www.google.com">Visit the website </a></div>
-        <div id="minidescriptionlinks"><a href="www.google.com">View update history </a></div>
-        <div id="minidescriptionlinks"><a href="www.google.com">Read related news </a></div>
-        <div id="minidescriptionlinks"><a href="www.google.com">View discussions </a></div>
-        <div id="minidescriptionlinks"><a href="www.google.com">Visit the Workshop </a></div>
-        <div id="minidescriptionlinks"><a href="www.google.com">Visit the website </a></div>
-        <div id="minidescriptionlinks"><a href="www.google.com">Find Community Groups </a></div>
+        <SideBarItemElement>Visit the website</SideBarItemElement>
+        <SideBarItemElement>View update history</SideBarItemElement>
+        <SideBarItemElement>Read related news</SideBarItemElement>
+        <SideBarItemElement>View discussions</SideBarItemElement>
+        <SideBarItemElement>Visit the Workshop</SideBarItemElement>
+        <SideBarItemElement>Visit the website</SideBarItemElement>
+        <SideBarItemElement>Find Community Groups</SideBarItemElement>
       </div>
-    </div>
+    </SideBarItem>
   );
 };
 

@@ -1,5 +1,6 @@
-import React from 'react';
-import { Tooltip } from 'reactstrap';
+import React from "react";
+import { Tooltip } from "reactstrap";
+import { CarouselItem, CarouselImgWrap } from "../../StyledComponents.jsx";
 
 class EachPicture extends React.Component {
   constructor(props) {
@@ -16,29 +17,22 @@ class EachPicture extends React.Component {
 
   render() {
     const { item } = this.props;
-    const {
-      thumbnail, price, name, hoverinfo,
-    } = item;
-    const {
-      gif, reviews, totalReviews, tag,
-    } = hoverinfo;
+    const { thumbnail, price, name, hoverinfo } = item;
+    const { gif, reviews, totalReviews, tag } = hoverinfo;
     const releasedate = `${hoverinfo.releasedate.substring(
       4,
-      10,
+      10
     )}, ${hoverinfo.releasedate.substring(11, 15)}`;
 
     // console.log('index: ', this.props.index);
     return (
-      <div className="item" id={`id${this.props.index}`}>
+      <CarouselItem id={`id${this.props.index}`}>
         <div className="item-img-wrap">
           <img src={thumbnail} alt="" />
         </div>
         <div className="content">
           <p>{name}</p>
-          <p>
-            $
-            {price}
-          </p>
+          <p>${price}</p>
         </div>
         <div>
           <Tooltip
@@ -56,13 +50,8 @@ class EachPicture extends React.Component {
               <div className="reviews">
                 <p> Overall User Reviews </p>
                 <p>
-                  <span className="c-blue">{reviews}</span>
-                  {' '}
-                  <span>
-                    (
-                    {totalReviews}
-                    ) reviews
-                  </span>
+                  <span className="c-blue">{reviews}</span>{" "}
+                  <span>({totalReviews}) reviews</span>
                 </p>
               </div>
               <h6>User tags:</h6>
@@ -74,7 +63,7 @@ class EachPicture extends React.Component {
             </div>
           </Tooltip>
         </div>
-      </div>
+      </CarouselItem>
     );
   }
 }
