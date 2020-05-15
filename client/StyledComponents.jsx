@@ -241,6 +241,7 @@ export const LanguageColumnTitle = styled.th`
   margin: 0;
   padding: 0;
   width: 62px;
+  border-bottom: 1px dotted #8f98a0;
 `;
 
 export const LanguageEach = styled.td`
@@ -248,6 +249,10 @@ export const LanguageEach = styled.td`
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-weight: 400;
+  border-bottom: 1px dotted #8f98a0;
+  &:first-child {
+    min-width: 115px;
+  }
 `;
 
 export const LanguagesCheckMark = styled.td`
@@ -256,6 +261,7 @@ export const LanguagesCheckMark = styled.td`
   margin: 0;
   padding: 0;
   text-align: center;
+  border-bottom: 1px dotted #8f98a0;
 `;
 
 export const CarouselItem = styled.div`
@@ -278,8 +284,77 @@ export const CarouselImgWrap = styled.div`
   height: 64px;
 `;
 
-export const CarouselNestedImg = styled.div`
+export const CarouselImgWrapImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
 `;
+export const CarouselContentName = styled.p`
+  margin-top: 6px;
+  font-size: 12px;
+  color: #b0aeac;
+`;
+
+export const CarouselContentPrice = styled.p`
+  margin-bottom: 6px;
+  margin-top: 0;
+  font-size: 8px;
+  color: #67c1f5;
+`;
+
+export const ToolTipWrap = styled.div`
+  background: rgb(209, 225, 247);
+  padding: 15px;
+`;
+
+export const Heading4 = styled.h4`
+  margin: 0;
+  color: black;
+`;
+
+export const ToolTipImgWrap = styled.div`
+  max-width: 280px;
+  width: 100%;
+  height: 130px;
+  margin: 8px 0;
+`;
+
+export const ToolTipImgWrapImage = styled(CarouselImgWrapImage)``;
+
+export const ToolTipReviews = styled.div`
+  background-color: rgba(57, 77, 88, 0.5);
+  padding: 8px;
+  color: white;
+`;
+
+export const Heading6 = styled.h6`
+  margin: 6px 0;
+  font-size: 16px;
+  color: black;
+`;
+
+export const ToolTipSpan = styled.span`
+  margin-right: 2px;
+  background-color: rgba(107, 138, 155, 0.5);
+  padding: 5px;
+  color: white;
+`;
+
+// export const
+
+// export const CBlack = styled.p`
+//   color: black;
+// `;
+
+// .tag-flex span {
+//   margin-right: 2px;
+//   background-color: rgba(107, 138, 155, 0.5);
+//   padding: 5px;
+//   color: white;
+// }
+
+// .tooltip-wrap h6 {
+//   margin: 6px 0;
+//   font-size: 16px;
+//   color: black;
+// }

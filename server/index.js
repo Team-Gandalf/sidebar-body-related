@@ -1,13 +1,13 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-const models = require("../database/models.js");
+const express = require('express');
+const bodyParser = require('body-parser');
+const models = require('../database/models.js');
 
 const app = express();
 
 app.use(express.static(`${__dirname}/../public`));
 app.use(bodyParser.json());
 
-app.get("/mainbody", (req, res) => {
+app.get('/mainbody', (req, res) => {
   const { query } = req;
   // console.log('query is : ', query);
   models.getOne(query, (err, data) => {

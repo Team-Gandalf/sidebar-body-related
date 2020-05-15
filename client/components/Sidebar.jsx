@@ -9,6 +9,7 @@ import {
   SideBarItemCustom,
   MetaCricticText,
   MetaCriticScore,
+  MetaCriticLogo,
 } from "../StyledComponents.jsx";
 
 const SideBar = (props) => {
@@ -28,11 +29,7 @@ const SideBar = (props) => {
         name={props.name}
       />
       <SideBarItemCustom>
-        <img
-          src="https://www.metacritic.com/images/icons/metacritic-icon.svg"
-          width="25"
-          height="25"
-        ></img>
+        <MetaCriticLogo src="https://www.metacritic.com/images/icons/metacritic-icon.svg"></MetaCriticLogo>
         <MetaCricticText> metacritic</MetaCricticText>
         <MetaCriticScore style={{ backgroundColor }}>
           {metacritic}

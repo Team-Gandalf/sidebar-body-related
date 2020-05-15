@@ -10,7 +10,8 @@
     "build": "webpack --watch",
     "seed": "node ./database/seedscript.js",
     "jest": "jest --detectOpenHandles --coverage --watch",
-    "lint": "eslint --ext .js --ext .jsx",
+    "lint": "eslint ./",
+    "lint-client": "eslint ./client --ext .js,.jsx",
     "production-build": "webpack --config production.config.js --watch"
   },
   "repository": {
@@ -35,6 +36,7 @@
     "react-slick": "^0.25.2",
     "reactstrap": "^8.4.1",
     "slick-carousel": "^1.8.1",
+    "style-loader": "^1.2.1",
     "styled-components": "^5.1.0"
   },
   "devDependencies": {
@@ -44,6 +46,7 @@
     "babel-cli": "^6.26.0",
     "babel-jest": "^26.0.1",
     "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",

@@ -19,89 +19,91 @@ const Languages = (props) => {
     <SideBarItem>
       <SystemSpec>Languages: </SystemSpec>
       <table>
-        <tbody>
+        <thead>
           <tr>
-            <th />
+            <LanguageColumnTitle></LanguageColumnTitle>
             <LanguageColumnTitle>Interface</LanguageColumnTitle>
             <LanguageColumnTitle>Full Audio</LanguageColumnTitle>
             <LanguageColumnTitle>Subtitles</LanguageColumnTitle>
           </tr>
+        </thead>
+        <tbody>
           <tr>
             <LanguageEach>English</LanguageEach>
-            {props.languages.English.map((item, i) => (
-              <LanguagesCheckMark key={i}>
+            {props.languages.English.map((item) => (
+              <LanguagesCheckMark key={item}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr>
             <LanguageEach>French</LanguageEach>
-            {props.languages.French.map((item, i) => (
-              <LanguagesCheckMark key={i}>
+            {props.languages.French.map((item) => (
+              <LanguagesCheckMark key={item}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr>
             <LanguageEach>German</LanguageEach>
-            {props.languages.German.map((item, i) => (
-              <LanguagesCheckMark key={i}>
+            {props.languages.German.map((item) => (
+              <LanguagesCheckMark key={item}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr>
             <LanguageEach>Japanese</LanguageEach>
-            {props.languages.Japanese.map((item, i) => (
-              <LanguagesCheckMark key={i}>
+            {props.languages.Japanese.map((item) => (
+              <LanguagesCheckMark key={item}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr>
             <LanguageEach>Korean</LanguageEach>
-            {props.languages.Korean.map((item, i) => (
-              <LanguagesCheckMark key={i}>
+            {props.languages.Korean.map((item) => (
+              <LanguagesCheckMark key={item}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr style={{ display: show ? "table-row" : "none" }}>
             <LanguageEach>Russian</LanguageEach>
-            {props.languages.Russian.map((item, i) => (
-              <LanguagesCheckMark key={i}>
+            {props.languages.Russian.map((item) => (
+              <LanguagesCheckMark key={item}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr style={{ display: show ? "table-row" : "none" }}>
             <LanguageEach>Simplified-Chinese</LanguageEach>
-            {props.languages.SimplifiedChinese.map((item, i) => (
-              <LanguagesCheckMark key={i}>
+            {props.languages.SimplifiedChinese.map((item) => (
+              <LanguagesCheckMark key={item}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr style={{ display: show ? "table-row" : "none" }}>
             <LanguageEach>Spanish-Latin America</LanguageEach>
-            {props.languages.SpanishSpain.map((item, i) => (
-              <LanguagesCheckMark key={i}>
+            {props.languages.SpanishSpain.map((item) => (
+              <LanguagesCheckMark key={item}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr style={{ display: show ? "table-row" : "none" }}>
             <LanguageEach>Spanish-Spain</LanguageEach>
-            {props.languages.SpanishSpain.map((item, i) => (
-              <LanguagesCheckMark key={i}>
+            {props.languages.SpanishSpain.map((item) => (
+              <LanguagesCheckMark key={item}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
           </tr>
           <tr style={{ display: show ? "table-row" : "none" }}>
             <LanguageEach>Traditional-Chinese</LanguageEach>
-            {props.languages.TraditionalChinese.map((item, i) => (
-              <LanguagesCheckMark key={i}>
+            {props.languages.TraditionalChinese.map((item) => (
+              <LanguagesCheckMark key={item}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>
             ))}
