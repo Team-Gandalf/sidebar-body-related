@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-const config = require("./config.js");
+const mongoose = require('mongoose');
+const config = require('./config.js');
 
 // SCHEMAS
 const gameSchema = new mongoose.Schema({
@@ -95,7 +95,7 @@ const gameSchema = new mongoose.Schema({
   ],
 });
 
-const Game = mongoose.model("Game", gameSchema);
+const Game = mongoose.model('Game', gameSchema);
 
 // METHODS
 const getOne = (query, callback) => {
@@ -106,7 +106,7 @@ const getOne = (query, callback) => {
     } else {
       callback(null, res);
       // console.log(res);
-      console.log("getOne success");
+      console.log('getOne success');
     }
   });
 };

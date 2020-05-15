@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import {
   SideBarItem,
   SystemSpec,
   SideBarItemElement,
   SideBarImage,
   SideBarText,
-} from "../../StyledComponents.jsx";
+} from '../../StyledComponents.jsx';
 
 const VRsupport = (props) => (
   // console.log('VRsupport props: ', props);

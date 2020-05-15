@@ -1,6 +1,21 @@
 import React from "react";
 import { Tooltip } from "reactstrap";
-import { CarouselItem, CarouselImgWrap } from "../../StyledComponents.jsx";
+import {
+  CarouselItem,
+  CarouselImgWrap,
+  CarouselImgWrapImage,
+  CarouselContentName,
+  CarouselContentPrice,
+  ToolTipWrap,
+  Heading4,
+  ToolTipImgWrap,
+  ToolTipImgWrapImage,
+  ToolTipReviews,
+  Heading6,
+  ToolTipSpan,
+} from "../../StyledComponents.jsx";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 class EachPicture extends React.Component {
   constructor(props) {
@@ -27,12 +42,12 @@ class EachPicture extends React.Component {
     // console.log('index: ', this.props.index);
     return (
       <CarouselItem id={`id${this.props.index}`}>
-        <div className="item-img-wrap">
-          <img src={thumbnail} alt="" />
-        </div>
-        <div className="content">
-          <p>{name}</p>
-          <p>${price}</p>
+        <CarouselImgWrap>
+          <CarouselImgWrapImage src={thumbnail} alt="" />
+        </CarouselImgWrap>
+        <div>
+          <CarouselContentName>{name}</CarouselContentName>
+          <CarouselContentPrice>${price}</CarouselContentPrice>
         </div>
         <div>
           <Tooltip
@@ -41,26 +56,26 @@ class EachPicture extends React.Component {
             target={`id${this.props.index}`}
             toggle={this.toggle}
           >
-            <div className="tooltip-wrap">
-              <h4>{name}</h4>
-              <p className="c-black">{releasedate}</p>
-              <div className="tooltip-img-wrap">
-                <img src={gif} alt="" width="50" height="50" />
-              </div>
-              <div className="reviews">
+            <ToolTipWrap>
+              <Heading4>{name}</Heading4>
+              <p style={{ color: "black" }}>{releasedate}</p>
+              <ToolTipImgWrap>
+                <ToolTipImgWrapImage src={gif} alt="" />
+              </ToolTipImgWrap>
+              <ToolTipReviews>
                 <p> Overall User Reviews </p>
                 <p>
-                  <span className="c-blue">{reviews}</span>{" "}
+                  <span style={{ color: "#417a9b" }}>{reviews}</span>{" "}
                   <span>({totalReviews}) reviews</span>
                 </p>
-              </div>
-              <h6>User tags:</h6>
-              <div className="tag-flex">
+              </ToolTipReviews>
+              <Heading6>User tags:</Heading6>
+              <div style={{ display: "flex" }}>
                 {tag.map((t) => (
-                  <span key={t}>{t}</span>
+                  <ToolTipSpan key={t}>{t}</ToolTipSpan>
                 ))}
               </div>
-            </div>
+            </ToolTipWrap>
           </Tooltip>
         </div>
       </CarouselItem>

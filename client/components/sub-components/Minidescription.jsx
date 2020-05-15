@@ -18,11 +18,11 @@ const Minidescription = (props) => {
     <SideBarItem>
       <div>
         <MiniDescriptionQuery>TITLE:</MiniDescriptionQuery>
-        <MiniDescriptionValue> {props.name}</MiniDescriptionValue>
+        <MiniDescriptionValue>{props.name}</MiniDescriptionValue>
       </div>
       <div>
         <MiniDescriptionQuery>GENRE:</MiniDescriptionQuery>
-        <MiniDescriptionUrl> {genres}</MiniDescriptionUrl>
+        <MiniDescriptionUrl>{genres}</MiniDescriptionUrl>
       </div>
       <div>
         <MiniDescriptionQuery>DEVELOPER:</MiniDescriptionQuery>
@@ -44,7 +44,7 @@ const Minidescription = (props) => {
       </div>
       <div>
         <MiniDescriptionQuery>RELEASE DATE:</MiniDescriptionQuery>
-        <MiniDescriptionValue> {releasedate}</MiniDescriptionValue>
+        <MiniDescriptionValue>{releasedate}</MiniDescriptionValue>
       </div>
       <br />
       <div>

@@ -11,13 +11,13 @@ const Achievements = (props) => {
   // console.log("Achievements props: ", props);
   return (
     <SideBarItem>
-      <SystemSpec>Includes {achievements} Steam Achievements </SystemSpec>
+      <SystemSpec>Includes {achievements} Steam Achievements</SystemSpec>
       {props.achievements.slice(0, 3).map((item, index) => (
         <span key={item}>
           <AchievementImage src={props.achievements[index]} alt="" />
         </span>
       ))}
-      <ViewAllAchievements>View all {achievements}</ViewAllAchievements>
+      <ViewAllAchievements>View all {achievements} </ViewAllAchievements>
     </SideBarItem>
   );
 };

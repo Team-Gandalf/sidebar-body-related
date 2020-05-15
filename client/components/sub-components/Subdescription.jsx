@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import {
   SideBarItem,
   SideBarItemElement,
   SideBarImage,
   SideBarText,
-} from "../../StyledComponents.jsx";
+} from '../../StyledComponents.jsx';
 
 const Subdescription = (props) => (
   // console.log('subdescription props: ', props);

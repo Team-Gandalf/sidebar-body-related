@@ -1,7 +1,7 @@
-import React from "react";
-import Slider from "react-slick";
-import EachPicture from "./sub-components/EachPicture.jsx";
-import { LeftColumn, Heading2 } from "../StyledComponents.jsx";
+import React from 'react';
+import Slider from 'react-slick';
+import EachPicture from './sub-components/EachPicture.jsx';
+import { LeftColumn, Heading2 } from '../StyledComponents.jsx';
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 
