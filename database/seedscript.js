@@ -318,7 +318,7 @@ const create237 = () => {
         "https://steamcdn-a.akamaihd.net/steam/apps/546560/ss_70fce3236bf252d3814f793744f648cbe35164e4.600x338.jpg?t=1588704198",
       ],
       maturecontent: {
-        description: [...new Set(xMContent)],
+        description: ["Cartoon Violence", "Crude Humor", "Fantasy Violence"],
       },
       sysrequirement: {
         os: ["Windows 10", "Mac OSX", "Linux"],
