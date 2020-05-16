@@ -86,7 +86,7 @@ const Languages = (props) => {
           </tr>
           <tr style={{ display: show ? "table-row" : "none" }}>
             <LanguageEach>Spanish-Latin America</LanguageEach>
-            {props.languages.SpanishSpain.map((item) => (
+            {props.languages.SpanishLatinAmerica.map((item) => (
               <LanguagesCheckMark key={item}>
                 {item ? "✔" : null}
               </LanguagesCheckMark>

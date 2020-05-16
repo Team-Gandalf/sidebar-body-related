@@ -273,7 +273,7 @@ export const LanguageEach = styled.td`
   font-weight: 400;
   border-bottom: 1px dotted #8f98a0;
   &:first-child {
-    min-width: 115px;
+    min-width: 120px;
   }
 `;
 
